@@ -15,12 +15,12 @@ function debounce(func, wait = 20, immediate = true) {
   };
 };
 
-const container = document.querySelectorAll('.container');
+const containers = document.querySelectorAll('.container');
 
 function checkPosition(e) {
-  container.forEach(container => {
-    const changeColorAt = (window.scrollY + window.innerHeight) - container.height / 4;
-    const containerBottom = container.offsetTop + container.height;
+  containers.forEach(container => {
+    const changeColorAt = (window.scrollY + window.innerHeight) - container.offsetHeight / 4;
+    const containerBottom = container.offsetTop + container.offsetHeight;
     const isHalfShown = changeColorAt > container.offsetTop;
     const isNotScrolledPast = window.scrollY < containerBottom;
     if (isHalfShown && isNotScrolledPast) {
