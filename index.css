@@ -1,17 +1,60 @@
+body {
+  background-color: #f39e94;
+}
+
 .container {
   height: 600px;
+  margin-left: 100px;
 }
 
 h1 {
   font-size: 100px;
 }
 
-.active {
-  background-color: rgb(255,255,255);
-  animation: changeColor 2s ease-in-out 0s 1 normal;
+.active1 {
+  animation: changeColor1 1s ease-in-out 0s 1 normal forwards;
 }
 
-@keyframes changeColor {
-  0% { background-color: rgb(240,240,240); }
-  100% { background-color: rgb(172, 46, 46); }
+.active3 {
+  animation: changeColor3 1s ease-in-out 0s 1 normal forwards;
 }
+.remove3 {
+  animation: removeColor3 1s ease-in-out 0s 1 normal forwards;
+}
+
+/* .active4 {
+  animation: changeColor4 1s ease-in-out 0s 1 normal forwards;
+}
+
+.active5 {
+  animation: changeColor5 1s ease-in-out 0s 1 normal forwards;
+}
+
+.active6 {
+  animation: changeColor6 1s ease-in-out 0s 1 normal forwards;
+} */
+
+@keyframes changeColor1 {
+  0% { background-color: #f39e94; }
+  100% { background-color: rgba(255, 255, 255); }
+}
+@keyframes changeColor3 {
+  0% { background-color: rgba(255, 255, 255); }
+  100% { background-color: #450c24; }
+}
+@keyframes removeColor3 {
+  0% { background-color: #450c24; }
+  100% { background-color: rgba(255, 255, 255); }
+}
+/* @keyframes changeColor4 {
+  0% { background-color: #450c24; }
+  100% { background-color: rgba(255, 255, 255); }
+}
+@keyframes changeColor5 {
+  0% { background-color: rgba(255, 255, 255); }
+  100% { background-color: #fadbd7; }
+}
+@keyframes changeColor6 {
+  0% { background-color: #fadbd7; }
+  100% { background-color: rgba(255, 255, 255); }
+} */

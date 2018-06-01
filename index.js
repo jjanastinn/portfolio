@@ -15,20 +15,27 @@ function debounce(func, wait = 20, immediate = true) {
   };
 };
 
-const containers = document.querySelectorAll('.container');
+const container1 = document.querySelector('.container1');
+const container2 = document.querySelector('.container2');
+const container3 = document.querySelector('.container3');
+
+const body = document.querySelector('body');
 
 function checkPosition(e) {
-  containers.forEach(container => {
-    const changeColorAt = (window.scrollY + window.innerHeight) - container.offsetHeight / 4;
-    const containerBottom = container.offsetTop + container.offsetHeight;
-    const isHalfShown = changeColorAt > container.offsetTop;
-    const isNotScrolledPast = window.scrollY < containerBottom;
-    if (isHalfShown && isNotScrolledPast) {
-      container.classList.add('active');
+
+    const colorAddStart = container1.offsetHeight + container2.offsetHeight - container3.offsetHeight / 2; //900
+    const colorAddEnd = container1.offsetHeight + container2.offsetHeight - container3.offsetHeight / 4; //1050
+    const colorSectionHeight = (colorAddEnd - colorAddStart) / 100;
+
+    if (window.scrollY > colorAddStart && window.scrollY < colorAddEnd) {
+      const currentSectionNumber = Math.round((window.scrollY - colorAddStart) / colorSectionHeight);
+      const opacityVal = currentSectionNumber / 100;
+      const colorVal = "rgba(191,14,89," + opacityVal + ")";
+      document.body.style.backgroundColor = colorVal; 
     } else {
-      container.classList.remove('active');
+      document.body.style.backgroundColor = "white";
     }
-  })
+   
 }
 
 
