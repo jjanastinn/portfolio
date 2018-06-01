@@ -1,5 +1,5 @@
 body {
-  background-color: #f39e94;
+  background-color: #005650;
 }
 
 .container {
@@ -7,54 +7,3 @@ body {
   margin-left: 100px;
 }
 
-h1 {
-  font-size: 100px;
-}
-
-.active1 {
-  animation: changeColor1 1s ease-in-out 0s 1 normal forwards;
-}
-
-.active3 {
-  animation: changeColor3 1s ease-in-out 0s 1 normal forwards;
-}
-.remove3 {
-  animation: removeColor3 1s ease-in-out 0s 1 normal forwards;
-}
-
-/* .active4 {
-  animation: changeColor4 1s ease-in-out 0s 1 normal forwards;
-}
-
-.active5 {
-  animation: changeColor5 1s ease-in-out 0s 1 normal forwards;
-}
-
-.active6 {
-  animation: changeColor6 1s ease-in-out 0s 1 normal forwards;
-} */
-
-@keyframes changeColor1 {
-  0% { background-color: #f39e94; }
-  100% { background-color: rgba(255, 255, 255); }
-}
-@keyframes changeColor3 {
-  0% { background-color: rgba(255, 255, 255); }
-  100% { background-color: #450c24; }
-}
-@keyframes removeColor3 {
-  0% { background-color: #450c24; }
-  100% { background-color: rgba(255, 255, 255); }
-}
-/* @keyframes changeColor4 {
-  0% { background-color: #450c24; }
-  100% { background-color: rgba(255, 255, 255); }
-}
-@keyframes changeColor5 {
-  0% { background-color: rgba(255, 255, 255); }
-  100% { background-color: #fadbd7; }
-}
-@keyframes changeColor6 {
-  0% { background-color: #fadbd7; }
-  100% { background-color: rgba(255, 255, 255); }
-} */
