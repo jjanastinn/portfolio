@@ -18,6 +18,7 @@ function debounce(func, wait = 10, immediate = true) {
 // ADD DIFFERENT COLORS FOR DIFFERENT CONTAINERS
 
 const containersNodeList = document.querySelectorAll('.container');
+const parallaxBg = document.querySelector('.projectOneBgOne');
 let containers = Array.from(containersNodeList);
 
 const body = document.querySelector('body');
@@ -40,14 +41,14 @@ function checkPosition(e) {
     
     const colorVal1 = "rgba(191,14,89," + opacityVal + ")";
     const colorVal2 = "rgba(73,62,82," + opacityVal + ")";
-    const colorVal3 = "rgba(156,145,43," + opacityVal + ")";
+    const colorVal3 = "rgba(69,12,36," + opacityVal + ")";
 
     const currentSectionNumberOut = Math.round((window.scrollY - colorRemoveStart) / colorSectionHeight);
     const reversedOpacityVal = (100 - currentSectionNumberOut) / 100;
 
     const colorValOut1 = "rgba(191,14,89," + reversedOpacityVal + ")";
     const colorValOut2 = "rgba(73,62,82," + reversedOpacityVal + ")";
-    const colorValOut3 = "rgba(156,145,43," + reversedOpacityVal + ")";
+    const colorValOut3 = "rgba(69,12,36," + reversedOpacityVal + ")";
 
     let className = container.classList[1];
 
@@ -61,6 +62,7 @@ function checkPosition(e) {
           break;
         case "container3":
           document.body.style.backgroundColor = colorVal3;
+          parallaxBg.style.backgroundPositionY=  (window.scrollY - parallaxBg.offsetTop) / 1.5+ "px";
           break;
         default:
           document.body.style.backgroundColor = "white";

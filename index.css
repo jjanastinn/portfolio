@@ -3,3 +3,16 @@
   height: 600px;
 }
 
+.container3 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 33% 34% 33%;
+}
+
+.projectOneBgOne {
+  background: url("./img/watercolour.jpg");
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
