@@ -31,6 +31,7 @@ a {
   height: 100vh;
   text-align: center;
   background-color: #fedbd7;
+  display: none;
 }
 
 .menu-item {

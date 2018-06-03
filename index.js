@@ -17,7 +17,20 @@ function debounce(func, wait = 10, immediate = true) {
 
 // BURGER MENU
 
+const burger = document.getElementById("burger-wrapper");
+const menu = document.getElementById("menu");
+const cross = document.getElementById("close-menu");
+burger.addEventListener("click", addMenu);
+cross.addEventListener("click", removeMenu);
 
+function addMenu() {
+  menu.style.display = "inherit";
+  document.body.style.overflow = "hidden";
+}
+
+function removeMenu() {
+  menu.style.display = "none";
+}
 
 
 
