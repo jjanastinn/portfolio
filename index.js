@@ -24,12 +24,14 @@ burger.addEventListener("click", addMenu);
 cross.addEventListener("click", removeMenu);
 
 function addMenu() {
+  menu.style.animation = "menu 1s";
   menu.style.display = "inherit";
   document.body.style.overflow = "hidden";
 }
 
 function removeMenu() {
   menu.style.display = "none";
+  document.body.style.overflow = "inherit";
 }
 
 

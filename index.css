@@ -19,12 +19,15 @@ a {
 }
 
 #burger-wrapper {
-  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 #burger {
-  width: 30%;
-  float: right; 
+  width: 38%;
+  float: right;
 }
 
 #menu {
@@ -32,6 +35,9 @@ a {
   text-align: center;
   background-color: #fedbd7;
   display: none;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .menu-item {
@@ -110,4 +116,15 @@ a {
     transform: translateY(0px);
   }
 }
+
+@keyframes menu {
+  from {
+    transform: translateX(400px);
+  }    
+  to {
+    transform: translateX(0px);
+  }
+}
+
+
 
