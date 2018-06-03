@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./index.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
   <title>Portfolio</title>
 </head>
 <body>
   <div class="container container1">
+    <div id="burger-wrapper">
+      <img src="img/menu.svg" id="burger">
+    </div>
     <h2>Welcome</h2>
   </div>
   <div class="container container2">
@@ -37,6 +40,20 @@
   <div class="container container6">
     <h2>Contact</h2>
   </div>
+
+  <template>
+    <div id="menu">
+      <div id="close-menu">
+        <img src="img/multiply.svg" id="close-sign">
+      </div>
+      <a href="" class="menu-item">about me</a>
+      <a href="" class="menu-item">projects</a>
+      <a href="" class="menu-item">skills</a>
+      <a href="" class="menu-item">learning goals</a>
+      <a href="" class="menu-item">contact</a>
+    </div>
+  </template>
+
   <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>

@@ -1,7 +1,9 @@
 
 body {
-  background-color: rgb(0,86,80);
-  font-family: 'Montserrat', sans-serif;
+  /* background-color: rgb(0,86,80); */
+  font-family: 'Zilla Slab', serif;
+  letter-spacing: 0.05em;
+  margin: 0;
 }
 
 h3 {
@@ -14,6 +16,38 @@ a {
   color: black;
   text-decoration: underline;
   text-align: center;
+}
+
+#burger-wrapper {
+  float: right;
+}
+
+#burger {
+  width: 30%;
+  float: right; 
+}
+
+#menu {
+  height: 100vh;
+  text-align: center;
+  background-color: #fedbd7;
+}
+
+.menu-item {
+  color: #822945;
+  text-decoration: underline;
+  display: block;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+#close-menu {
+  padding-bottom: 90px;
+}
+
+#close-sign {
+  width: 15%;
+  float: right;
 }
 
 .container {
@@ -30,7 +64,7 @@ a {
 .project1 {
   grid-column: 4 / 20;
   grid-row: 4 / 16;
-  background: linear-gradient(117deg, #a699bfd4, #675684);
+  background: linear-gradient(117deg, #d4c8ea, #5c4c77);
   z-index: 1;
   display: grid;
   grid-template-columns: 1;
@@ -54,13 +88,20 @@ a {
   z-index: -1;
 }
 
-.active {
+.slidein {
   animation-duration: 1s;
-  animation-name: slidein;
+  animation-name: slide;
   animation-fill-mode: forwards;
 }
 
-@keyframes slidein {
+.slideout {
+  animation-duration: 1s;
+  animation-name: slide;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
   from {
     transform: translateY(200px);
   }    
@@ -68,3 +109,4 @@ a {
     transform: translateY(0px);
   }
 }
+
