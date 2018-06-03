@@ -85,13 +85,12 @@ function checkPosition(e) {
 
     let scrollPos = 0;
     const startPosition = window.scrollY + window.innerHeight >= project.offsetTop;
-    if (startPosition && (document.body.getBoundingClientRect()).top < scrollPos) {
+    if (startPosition) {
       project.classList.add("active");
-      scrollPos = (document.body.getBoundingClientRect()).top;
-    } else if ((document.body.getBoundingClientRect()).top > scrollPos) {
+    } else if ((project.getBoundingClientRect()).top > scrollPos) {
       project.classList.remove("active");
-      scrollPos = (document.body.getBoundingClientRect()).top;
     }
+    scrollPos = (project.getBoundingClientRect()).top;
   })
 
 }  
