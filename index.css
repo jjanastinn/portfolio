@@ -1,9 +1,10 @@
 
 body {
-  /* background-color: rgb(0,86,80); */
+  background-color: rgb(238, 247, 254);
   font-family: 'Zilla Slab', serif;
   letter-spacing: 0.05em;
   margin: 0;
+  color: rgb(66, 51, 110);
 }
 
 h3 {
@@ -59,6 +60,29 @@ a {
 
 .container {
   height: 600px;
+}
+
+.container1 {
+  text-align: center;
+  background: radial-gradient(circle, #eff7fe59, #eff7fead, #eff7fe00), url(img/watercolor.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+}
+
+.container1 h2 {
+  font-size: 4em;
+  padding-top: 30vh;
+  margin-bottom: 30px;
+}
+
+.container1 p {
+  font-size: 2em;
+}
+
+.line {
+  border-bottom: 4px solid rgb(66, 51, 110);
+  margin: 0 70px 0 70px;
 }
 
 .wrapper {
