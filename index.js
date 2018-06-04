@@ -16,7 +16,6 @@ function debounce(func, wait = 10, immediate = true) {
 };
 
 // BURGER MENU
-
 const burger = document.getElementById("burger-wrapper");
 const menu = document.getElementById("menu");
 const cross = document.getElementById("close-menu");
@@ -24,22 +23,23 @@ burger.addEventListener("click", addMenu);
 cross.addEventListener("click", removeMenu);
 
 function addMenu() {
-  menu.style.animation = "menu 1s";
+  menu.style.animation = "menuIn 1s";
   menu.style.display = "inherit";
   document.body.style.overflow = "hidden";
 }
 
 function removeMenu() {
-  menu.style.display = "none";
+  menu.style.animation = "menuOut 1s forwards";
   document.body.style.overflow = "inherit";
 }
-
 
 
 const containersNodeList = document.querySelectorAll('.container');
 const projectsNodeList = document.querySelectorAll('.project');
 let containers = Array.from(containersNodeList);
 let projects = Array.from(projectsNodeList);
+
+let scrollPos = 0;
 
 const body = document.querySelector('body');
 
@@ -106,10 +106,9 @@ function checkPosition(e) {
 // SLIDE IN PROJECTS
   projects.forEach(project => {
     
-    let scrollPos = 0;
     const startPosition = window.scrollY + window.innerHeight >= project.offsetTop;
     const endPosition = window.scrollY + window.innerHeight <= project.offsetTop + project.offsetHeight / 3;
-    const scrollUp = window.scrollY > scrollPos;
+    const scrollUp = window.scrollY < scrollPos;
 
     if (startPosition) {
       project.classList.add("slidein");
@@ -119,9 +118,9 @@ function checkPosition(e) {
       project.classList.add("slideout");
     }
     
-    scrollPos = (document.body.getBoundingClientRect()).top;
   })
   
+  scrollPos = window.scrollY;
 }  
 
 window.addEventListener('scroll', debounce(checkPosition));

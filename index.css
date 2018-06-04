@@ -141,12 +141,22 @@ a {
   }
 }
 
-@keyframes menu {
+@keyframes menuIn {
   from {
     transform: translateX(400px);
   }    
   to {
     transform: translateX(0px);
+  }
+}
+
+@keyframes menuOut {
+  from {
+    transform: translateX(0px);
+  }    
+  to {
+    transform: translateX(400px);
+    display: none;
   }
 }
 
