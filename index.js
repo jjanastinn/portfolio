@@ -67,7 +67,7 @@ function checkPosition(e) {
     const currentSectionNumberOut = Math.round((window.scrollY - colorRemoveStart) / colorSectionHeight);
     const reversedOpacityVal = (100 - currentSectionNumberOut) / 100;
 
-    const colorValOut1 = "rgba(238, 247, 254," + reversedOpacityVal + ")";
+    const colorValOut1 = "rgba(238, 238, 254," + reversedOpacityVal + ")";
     const colorValOut2 = "rgba(73,62,82," + reversedOpacityVal + ")";
     const colorValOut3 = "rgba(69,12,36," + reversedOpacityVal + ")";
 
