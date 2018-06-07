@@ -101,6 +101,7 @@ a {
   color: #EC5946;
   font-size: 4em;
   margin-left: 0;
+  letter-spacing: -10px;
 }
 
 .description {
@@ -109,12 +110,17 @@ a {
   grid-column: 2 / 6;
   grid-row-start: 3;
   font-size: 1.5em;
-  margin: 0 15px;
+  margin: -10px 15px 0 15px; 
 }
 
 .description p {
   padding: 15px;
   margin: 0;
+}
+
+.education {
+  clear: both;
+  overflow: hidden;
 }
 
 .edHeading h3 {
@@ -123,26 +129,64 @@ a {
   text-align: right;
   color: #EC5946;
   font-size: 3em;
-  margin-left: 0;
-}
-
-.edDescription{
-  border: 4px solid #EC5946;
-  color: #EC5946;
-  font-size: 1em;
-  margin: 0 15px;
-  width: 70%;
+  margin-bottom: 30px;
 }
 
 .edDescription {
   border: 4px solid #EC5946;
   color: #EC5946;
   font-size: 1em;
-  margin: 0 15px;
+  margin: 20px 15px;
   width: 70%;
 }
 
+.edDescription:last-child {
+  float: right;
+}
+
+.edDescription h4 {
+  font-size: 2em;
+  margin: 15px 15px 0 15px;
+}
+
 .edDescription p {
+  padding: 15px;
+  margin: 0;
+}
+
+.experience {
+  clear: both;
+  overflow: hidden;
+}
+
+.exHeading h3 {
+  letter-spacing: 0.2em;
+  text-align: left;
+  color: #EC5946;
+  font-size: 3em;
+  margin-bottom: 15px;
+  margin-top: 15vh;
+}
+
+.exDescription {
+  border: 4px solid #EC5946;
+  color: #EC5946;
+  font-size: 1em;
+  margin: 20px 15px;
+  width: 70%;
+  float: right;
+}
+
+.exDescription:last-child {
+  float: left;
+}
+
+.exDescription h4 {
+  font-size: 2em;
+  margin: 15px 15px 0 15px;
+}
+
+.exDescription p {
   padding: 15px;
   margin: 0;
 }
@@ -210,7 +254,7 @@ a {
 
 @keyframes menuIn {
   from {
-    transform: translateX(400px);
+    transform: translateX(100vw);
   }    
   to {
     transform: translateX(0px);
@@ -222,7 +266,7 @@ a {
     transform: translateX(0px);
   }    
   to {
-    transform: translateX(400px);
+    transform: translateX(100vw);
     display: none;
   }
 }
