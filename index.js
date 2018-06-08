@@ -104,23 +104,23 @@ function checkPosition(e) {
 
 
 // SLIDE IN PROJECTS
-  projects.forEach(project => {
+  // projects.forEach(project => {
     
-    const startPosition = window.scrollY + window.innerHeight >= project.offsetTop;
-    const endPosition = window.scrollY + window.innerHeight <= project.offsetTop + project.offsetHeight / 3;
-    const scrollUp = window.scrollY < scrollPos;
+  //   const startPosition = window.scrollY + window.innerHeight >= project.offsetTop;
+  //   const endPosition = window.scrollY + window.innerHeight <= project.offsetTop + project.offsetHeight / 3;
+  //   const scrollUp = window.scrollY < scrollPos;
 
-    if (startPosition) {
-      project.classList.add("slidein");
-    } else if (scrollUp) {
-      project.classList.remove("slidein");
-    } else if (endPosition && !startPosition && scrollUp) {
-      project.classList.add("slideout");
-    }
+  //   if (startPosition) {
+  //     project.classList.add("slidein");
+  //   } else if (scrollUp) {
+  //     project.classList.remove("slidein");
+  //   } else if (endPosition && !startPosition && scrollUp) {
+  //     project.classList.add("slideout");
+  //   }
     
-  })
+  // })
   
-  scrollPos = window.scrollY;
+  // scrollPos = window.scrollY;
 }  
 
 window.addEventListener('scroll', debounce(checkPosition));

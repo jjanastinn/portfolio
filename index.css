@@ -1,4 +1,6 @@
 
+/* RESET */
+
 body {
   background-color: rgb(238, 238, 254);
   font-family: 'Zilla Slab', serif;
@@ -7,17 +9,34 @@ body {
   color: rgb(66, 51, 110);
 }
 
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
 h3 {
-  text-align: center;
+  font-size: 3em;  
+  letter-spacing: 0.1em;
+}
+
+h4 {
   font-size: 2em;
-  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em;
 }
 
 a {
-  color: black;
   text-decoration: underline;
-  text-align: center;
 }
+
+/* NAVIGATION */
 
 #burger-wrapper {
   position: fixed;
@@ -58,6 +77,8 @@ a {
   float: right;
 }
 
+/* MAIN */
+
 .container {
   height: 600px;
 }
@@ -71,8 +92,7 @@ a {
   background-size: 100vw; */
 }
 
-.container1 h2 {
-  font-size: 4em;
+.container1 h1 {
   padding-top: 25vh;
   margin-bottom: 30px;
 }
@@ -84,7 +104,7 @@ a {
 .introduction {
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: 85px 85px;
+  grid-template-rows: 67px 67px;
 }
 
 .container2 {
@@ -99,8 +119,7 @@ a {
   writing-mode: vertical-lr;
   text-orientation: upright;
   color: #EC5946;
-  font-size: 4em;
-  margin-left: 0;
+  margin-left: 5vw;
   letter-spacing: -10px;
 }
 
@@ -109,8 +128,8 @@ a {
   color: #EC5946;
   grid-column: 2 / 6;
   grid-row-start: 3;
-  font-size: 1.5em;
-  margin: -10px 15px 0 15px; 
+  font-size: 1.2em;
+  margin: 0 15px; 
 }
 
 .description p {
@@ -118,77 +137,64 @@ a {
   margin: 0;
 }
 
-.education {
-  clear: both;
-  overflow: hidden;
-}
-
-.edHeading h3 {
-  letter-spacing: 0.2em;
-  margin-top: 15vh;
-  text-align: right;
-  color: #EC5946;
-  font-size: 3em;
-  margin-bottom: 30px;
-}
-
-.edDescription {
-  border: 4px solid #EC5946;
-  color: #EC5946;
-  font-size: 1em;
-  margin: 20px 15px;
-  width: 70%;
-}
-
-.edDescription:last-child {
-  float: right;
-}
-
-.edDescription h4 {
-  font-size: 2em;
-  margin: 15px 15px 0 15px;
-}
-
-.edDescription p {
-  padding: 15px;
-  margin: 0;
-}
-
+.education,
 .experience {
   clear: both;
   overflow: hidden;
 }
 
-.exHeading h3 {
-  letter-spacing: 0.2em;
-  text-align: left;
+.education h3 {
+  text-align: right;
   color: #EC5946;
-  font-size: 3em;
-  margin-bottom: 15px;
-  margin-top: 15vh;
+  margin: 10vh 10px 30px 10px;
 }
 
-.exDescription {
+.experience h3 {
+  text-align: left;
+  color: #EC5946;
+  margin: 10vh 10px 15px 15px;
+}
+
+.box-content {
   border: 4px solid #EC5946;
   color: #EC5946;
-  font-size: 1em;
   margin: 20px 15px;
   width: 70%;
+}
+
+.education .box-content:last-child {
   float: right;
 }
 
-.exDescription:last-child {
+.experience .box-content {
+  float: right;
+}
+
+.experience .box-content:last-child {
   float: left;
 }
 
-.exDescription h4 {
-  font-size: 2em;
-  margin: 15px 15px 0 15px;
+.box-content h4 {
+  margin: 15px 15px 25px 15px;
 }
 
-.exDescription p {
-  padding: 15px;
+.box-content p {
+  padding: 0 15px;
   margin: 0;
+}
+
+.points {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.point {
+  background-color: #EC5946;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 10px 2px 10px 2px;
 }
 
 .line {
@@ -242,6 +248,8 @@ a {
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
+
+/* KEYFRAMES */
 
 @keyframes slide {
   from {
