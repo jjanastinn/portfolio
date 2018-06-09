@@ -61,15 +61,19 @@ function checkPosition(e) {
     const currentSectionNumber = Math.round((window.scrollY - colorAddStart) / colorSectionHeight);
     const opacityVal = currentSectionNumber / 100;
     
-    const colorVal2 = "rgba(73,62,82," + opacityVal + ")";
-    const colorVal3 = "rgba(69,12,36," + opacityVal + ")";
+    const colorVal2 = "rgba(255, 236, 234," + opacityVal + ")";
+    const colorVal3 = "rgba(247, 253, 252," + opacityVal + ")";
+    const colorVal4 = "rgba(243, 238, 247," + opacityVal + ")";
+    const colorVal5 = "rgba(152, 52, 96," + opacityVal + ")";
+    const colorVal51 = "rgb(255, 255, 255)";
 
     const currentSectionNumberOut = Math.round((window.scrollY - colorRemoveStart) / colorSectionHeight);
     const reversedOpacityVal = (100 - currentSectionNumberOut) / 100;
 
     const colorValOut1 = "rgba(238, 238, 254," + reversedOpacityVal + ")";
-    const colorValOut2 = "rgba(73,62,82," + reversedOpacityVal + ")";
-    const colorValOut3 = "rgba(69,12,36," + reversedOpacityVal + ")";
+    const colorValOut2 = "rgba(255, 236, 234," + reversedOpacityVal + ")";
+    const colorValOut3 = "rgba(247, 253, 252," + reversedOpacityVal + ")";
+    const colorValOut4 = "rgba(243, 238, 247," + reversedOpacityVal + ")";
 
     let className = container.classList[1];
 
@@ -78,8 +82,14 @@ function checkPosition(e) {
         case "container2":
           document.body.style.backgroundColor = colorVal2;
           break;
-        case "container3":
-          document.body.style.backgroundColor = colorVal3;
+        // case "container3":
+        //   document.body.style.backgroundColor = colorVal3;
+        //   break;
+        case "container4":
+          document.body.style.backgroundColor = colorVal4;
+          break;
+        case "container5":
+          document.body.style.backgroundColor = colorVal5;
           break;
         default:
           break;
@@ -92,8 +102,11 @@ function checkPosition(e) {
           case "container2":
             document.body.style.backgroundColor = colorValOut2;
             break;
-          case "container3":
-            document.body.style.backgroundColor = colorValOut3;
+          // case "container3":
+          //   document.body.style.backgroundColor = colorValOut3;
+          //   break;
+          case "container4":
+            document.body.style.backgroundColor = colorValOut4;
             break;
           default:
             break;
